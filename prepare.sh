@@ -1,6 +1,6 @@
 #!/bin/bash
 
-wget --no-check-certificate -q https://raw.github.com/dbpedia-spotlight/dbpedia-spotlight/master/bin/index_db.sh
+wget --no-check-certificate -q https://raw.github.com/michellemay/dbpedia-spotlight/master/bin/index_db.sh
 chmod +x index_db.sh
 
 mkdir wdir
