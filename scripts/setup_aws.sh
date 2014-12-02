@@ -1,12 +1,20 @@
+#!/bin/bash
+
+rm -rf wdir
+mkdir /mnt/wdir
+ln -s /mnt/wdir wdir
+
 # Checking versions of hadoop and pig
 pig -version
 hadoop version
+
 # We use elinks to look at the job tracker and screen to collaboratively debug stuff
 #sudo apt-get install elinks
 #sudo apt-get install screen
 sudo yum -y install elinks
 sudo yum -y install screen
 sudo yum -y install vim
+
 # some dependencies require maven3. will install
 sudo mkdir -p /opt/tools
 sudo chown hadoop /opt/tools
@@ -30,7 +38,4 @@ sudo pip install python-dateutil
 s3cmd --version
 s3cmd --configure
 
-rm -rf wdir
-mkdir /mnt/wdir
-ln -s /mnt/wdir wdir
 
