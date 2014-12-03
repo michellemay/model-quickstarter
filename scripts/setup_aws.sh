@@ -1,5 +1,9 @@
 #!/bin/bash
 
+rm -rf models
+mkdir /mnt/models
+ln -s /mnt/models models
+
 rm -rf wdir
 mkdir /mnt/wdir
 ln -s /mnt/wdir wdir
