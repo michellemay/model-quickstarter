@@ -23,14 +23,15 @@ sudo yum -y install vim
 sudo mkdir -p /opt/tools
 sudo chown hadoop /opt/tools
 cd /opt/tools
-wget ftp://mirror.csclub.uwaterloo.ca/apache/maven/maven-3/3.2.3/binaries/apache-maven-3.2.3-bin.tar.gz
-tar -xzvf apache-maven-3.2.3-bin.tar.gz
-export MAVEN_HOME=/opt/tools/apache-maven-3.2.3
-export M2_HOME=/opt/tools/apache-maven-3.2.3
-export M2=/opt/tools/apache-maven-3.2.3/bin
-export PATH=/opt/tools/apache-maven-3.2.3/bin:$PATH
+MVN_VERSION=3.2.5
+wget ftp://mirror.csclub.uwaterloo.ca/apache/maven/maven-3/$MVN_VERSION/binaries/apache-maven-$MVN_VERSION-bin.tar.gz
+tar -xzvf apache-maven-$MVN_VERSION-bin.tar.gz
+export MAVEN_HOME=/opt/tools/apache-maven-$MVN_VERSION
+export M2_HOME=/opt/tools/apache-maven-$MVN_VERSION
+export M2=/opt/tools/apache-maven-$MVN_VERSION/bin
+export PATH=/opt/tools/apache-maven-$MVN_VERSION/bin:$PATH
 mvn --version
-echo -e "export MAVEN_HOME=/opt/tools/apache-maven-3.2.3 \n export M2_HOME=/opt/tools/apache-maven-3.2.3 \n export M2=/opt/tools/apache-maven-3.2.3/bin \n export PATH=/opt/tools/apache-maven-3.2.3/bin:\$PATH" >> ~/.bashrc
+echo -e "export MAVEN_HOME=/opt/tools/apache-maven-$MVN_VERSION \n export M2_HOME=/opt/tools/apache-maven-$MVN_VERSION \n export M2=/opt/tools/apache-maven-$MVN_VERSION/bin \n export PATH=/opt/tools/apache-maven-$MVN_VERSION/bin:\$PATH" >> ~/.bashrc
 
 # http://rbgeek.wordpress.com/2014/07/16/how-to-install-the-latest-version-of-s3cmd-tool-on-linux/
 sudo yum install unzip python-pip
